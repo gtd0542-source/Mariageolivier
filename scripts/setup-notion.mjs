@@ -23,22 +23,24 @@ async function createRsvpDatabase() {
   const db = await notion.databases.create({
     parent: { type: "page_id", page_id: parentPageId },
     title: [{ type: "text", text: { content: "Mariage — Confirmations RSVP" } }],
-    properties: {
-      Nom: { title: {} },
-      Téléphone: { phone_number: {} },
-      WhatsApp: { phone_number: {} },
-      "Lien WhatsApp": { url: {} },
-      Email: { email: {} },
-      Accompagnants: { number: {} },
-      Message: { rich_text: {} },
-      "Date d'inscription": { date: {} },
-      Statut: {
-        select: {
-          options: [
-            { name: "Confirmé", color: "green" },
-            { name: "En attente", color: "yellow" },
-            { name: "Annulé", color: "red" },
-          ],
+    initial_data_source: {
+      properties: {
+        Nom: { title: {} },
+        Téléphone: { phone_number: {} },
+        WhatsApp: { phone_number: {} },
+        "Lien WhatsApp": { url: {} },
+        Email: { email: {} },
+        Accompagnants: { number: {} },
+        Message: { rich_text: {} },
+        "Date d'inscription": { date: {} },
+        Statut: {
+          select: {
+            options: [
+              { name: "Confirmé", color: "green" },
+              { name: "En attente", color: "yellow" },
+              { name: "Annulé", color: "red" },
+            ],
+          },
         },
       },
     },
@@ -50,32 +52,34 @@ async function createAccommodationDatabase() {
   const db = await notion.databases.create({
     parent: { type: "page_id", page_id: parentPageId },
     title: [{ type: "text", text: { content: "Mariage — Réservations Hébergement" } }],
-    properties: {
-      Nom: { title: {} },
-      Téléphone: { phone_number: {} },
-      WhatsApp: { phone_number: {} },
-      "Lien WhatsApp": { url: {} },
-      Email: { email: {} },
-      "Type de chambre": {
-        select: {
-          options: [
-            { name: "Chambre Standard", color: "blue" },
-            { name: "Chambre Premium", color: "purple" },
-            { name: "Suite", color: "pink" },
-          ],
+    initial_data_source: {
+      properties: {
+        Nom: { title: {} },
+        Téléphone: { phone_number: {} },
+        WhatsApp: { phone_number: {} },
+        "Lien WhatsApp": { url: {} },
+        Email: { email: {} },
+        "Type de chambre": {
+          select: {
+            options: [
+              { name: "Chambre Standard", color: "blue" },
+              { name: "Chambre Premium", color: "purple" },
+              { name: "Suite", color: "pink" },
+            ],
+          },
         },
-      },
-      "Nombre de personnes": { number: {} },
-      "Date d'arrivée": { date: {} },
-      "Date de départ": { date: {} },
-      Statut: {
-        select: {
-          options: [
-            { name: "En attente", color: "yellow" },
-            { name: "Confirmé", color: "blue" },
-            { name: "Payé", color: "green" },
-            { name: "Occupé", color: "gray" },
-          ],
+        "Nombre de personnes": { number: {} },
+        "Date d'arrivée": { date: {} },
+        "Date de départ": { date: {} },
+        Statut: {
+          select: {
+            options: [
+              { name: "En attente", color: "yellow" },
+              { name: "Confirmé", color: "blue" },
+              { name: "Payé", color: "green" },
+              { name: "Occupé", color: "gray" },
+            ],
+          },
         },
       },
     },
