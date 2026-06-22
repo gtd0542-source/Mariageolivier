@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --color-ivory: #faf7f2;
+  --color-sand: #e8ddc7;
+  --color-sage: #9caf88;
+  --color-sage-dark: #5d6f4f;
+  --color-eucalyptus: #87a08f;
+  --color-gold: #c9a86a;
+  --color-gold-light: #e3cf9d;
+  --color-gold-deep: #7d6430;
+  --color-stone: #6b6760;
+  --color-charcoal: #2e2c28;
+  --color-mist: #f1efe9;
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-sand: var(--color-sand);
+  --color-sage: var(--color-sage);
+  --color-sage-dark: var(--color-sage-dark);
+  --color-eucalyptus: var(--color-eucalyptus);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-stone: var(--color-stone);
+  --color-charcoal: var(--color-charcoal);
+  --color-mist: var(--color-mist);
+
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), serif;
+}
+
+::selection {
+  background: var(--color-gold-light);
+  color: var(--color-charcoal);
+}
+
+.text-shadow-soft {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
