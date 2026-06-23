@@ -1,5 +1,6 @@
 import { IntroScreen } from "@/components/layout/IntroScreen";
 import { Navigation } from "@/components/layout/Navigation";
+import { FloatingPetals } from "@/components/animations/FloatingPetals";
 import { Hero } from "@/components/sections/hero/Hero";
 import { Story } from "@/components/sections/story/Story";
 import { Rsvp } from "@/components/sections/rsvp/Rsvp";
@@ -42,6 +43,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
       />
       <IntroScreen />
+      <FloatingPetals position="fixed" count={13} className="z-30 opacity-70" />
       <Navigation />
       <main>
         <Hero />

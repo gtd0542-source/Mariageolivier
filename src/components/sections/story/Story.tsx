@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { story } from "@/data/content";
 import { images } from "@/data/images";
 import { Reveal } from "@/components/animations/Reveal";
+import { PhotoCard } from "@/components/animations/PhotoCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Story() {
@@ -32,20 +32,9 @@ export function Story() {
                 key={step.title}
                 className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
               >
-                <Reveal
-                  delay={0.05}
-                  className={imageFirst ? "order-1" : "order-1 md:order-2"}
-                >
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-lg">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                </Reveal>
+                <div className={imageFirst ? "order-1" : "order-1 md:order-2"}>
+                  <PhotoCard image={img} direction={imageFirst ? "left" : "right"} />
+                </div>
 
                 <Reveal
                   delay={0.15}

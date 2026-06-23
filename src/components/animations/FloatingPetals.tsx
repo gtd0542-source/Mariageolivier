@@ -7,6 +7,8 @@ import { useMounted } from "@/lib/useMounted";
 type FloatingPetalsProps = {
   count?: number;
   className?: string;
+  /** "fixed" pins the layer to the viewport so petals drift over the whole page as you scroll. */
+  position?: "absolute" | "fixed";
 };
 
 function seededRandom(seed: number) {
@@ -14,7 +16,7 @@ function seededRandom(seed: number) {
   return x - Math.floor(x);
 }
 
-export function FloatingPetals({ count = 16, className }: FloatingPetalsProps) {
+export function FloatingPetals({ count = 16, className, position = "absolute" }: FloatingPetalsProps) {
   const mounted = useMounted();
 
   const petals = useMemo(
@@ -36,7 +38,7 @@ export function FloatingPetals({ count = 16, className }: FloatingPetalsProps) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute inset-0 overflow-hidden ${className ?? ""}`}
+      className={`pointer-events-none ${position} inset-0 overflow-hidden ${className ?? ""}`}
     >
       {petals.map((petal) => (
         <motion.span
