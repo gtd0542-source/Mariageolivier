@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Info } from "lucide-react";
+import { MapPin, Mail, Clock, Info } from "lucide-react";
 import { practicalInfo } from "@/data/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/animations/Reveal";
@@ -6,7 +6,6 @@ import { WeatherWidget } from "./WeatherWidget";
 
 const items = [
   { icon: MapPin, label: "Adresse", value: practicalInfo.address },
-  { icon: Phone, label: "Téléphone", value: practicalInfo.phone },
   { icon: Mail, label: "Email", value: practicalInfo.email },
   { icon: Clock, label: "Arrivée recommandée", value: practicalInfo.arrivalTime },
   { icon: Clock, label: "Début de la cérémonie", value: practicalInfo.ceremonyStart },

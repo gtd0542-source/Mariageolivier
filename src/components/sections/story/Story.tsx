@@ -40,13 +40,21 @@ export function Story() {
                   delay={0.15}
                   className={imageFirst ? "order-2" : "order-2 md:order-1"}
                 >
-                  <p className="font-display text-sm uppercase tracking-[0.25em] text-gold-deep">
-                    {step.year}
-                  </p>
+                  {(step.reference || step.year) && (
+                    <p className="font-display text-sm uppercase tracking-[0.25em] text-gold-deep">
+                      {step.reference || step.year}
+                    </p>
+                  )}
                   <h3 className="mt-3 font-display text-2xl text-charcoal sm:text-3xl">
                     {step.title}
                   </h3>
-                  <p className="mt-4 font-body leading-relaxed text-stone">
+                  <p
+                    className={
+                      step.reference
+                        ? "mt-4 font-display text-lg italic leading-relaxed text-stone"
+                        : "mt-4 font-body leading-relaxed text-stone"
+                    }
+                  >
                     {step.text}
                   </p>
                 </Reveal>

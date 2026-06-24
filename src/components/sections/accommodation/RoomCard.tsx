@@ -6,6 +6,7 @@ type RoomCardProps = {
   name: string;
   description: string;
   capacity: string;
+  price: string;
   amenities: string[];
   image: ImageAsset;
   delay?: number;
@@ -16,6 +17,7 @@ export function RoomCard({
   name,
   description,
   capacity,
+  price,
   amenities,
   image,
   delay = 0,
@@ -33,7 +35,12 @@ export function RoomCard({
         />
       </div>
       <div className="p-6">
-        <h3 className="font-display text-xl text-charcoal">{name}</h3>
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="font-display text-xl text-charcoal">{name}</h3>
+          <span className="shrink-0 rounded-full bg-mist px-3 py-1 font-display text-sm text-gold-deep">
+            {price}
+          </span>
+        </div>
         <p className="mt-2 font-body text-sm text-stone">{description}</p>
         <p className="mt-3 font-body text-sm font-medium text-sage-dark">
           Capacité : {capacity}

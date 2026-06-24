@@ -9,10 +9,10 @@ export const couple = {
   venueName: "Complexe Mundi",
   venueCity: "Yaoundé",
   venueCountry: "Cameroun",
-  venueFullAddress: "Complexe Mundi, Yaoundé, Cameroun", // [PLACEHOLDER] adresse précise (quartier/voie) à compléter
+  venueFullAddress: "Complexe Mundi, Ntoung, Route de Nsimalen, Yaoundé, Cameroun",
   venueCoordinates: {
-    lat: 3.8480, // [PLACEHOLDER] coordonnées GPS exactes du Complexe Mundi à confirmer
-    lng: 11.5021,
+    lat: 3.748577,
+    lng: 11.519085,
   },
 };
 
@@ -28,32 +28,35 @@ export const hero = {
 };
 
 export const story = {
-  intro:
-    "[PLACEHOLDER] Une courte introduction à l'histoire d'Olivier et Céline — comment leurs chemins se sont croisés.",
+  intro: "",
   biblicalVerse: {
-    text: "[PLACEHOLDER] Texte du passage biblique choisi par les mariés.",
-    reference: "[PLACEHOLDER] Référence (ex. 1 Corinthiens 13:4-7)",
+    text: "L'amour est patient, il est plein de bonté ; l'amour n'est point envieux ; l'amour ne se vante point, il ne s'enfle point d'orgueil. Il ne fait rien de malhonnête, il ne cherche point son intérêt, il ne s'irrite point, il ne soupçonne point le mal. Il ne se réjouit point de l'injustice, mais il se réjouit de la vérité. Il excuse tout, croit tout, espère tout, supporte tout. L'amour ne périt jamais.",
+    reference: "1 Corinthiens 13:4-8",
   },
   timeline: [
     {
-      year: "[PLACEHOLDER]",
+      year: "",
       title: "Leur rencontre",
-      text: "[PLACEHOLDER] Le récit de leur première rencontre.",
+      text: "« Celui qui trouve une femme trouve le bonheur ; c'est une grâce qu'il obtient de l'Éternel. »",
+      reference: "Proverbes 18:22",
     },
     {
-      year: "[PLACEHOLDER]",
+      year: "",
       title: "Le premier pas",
-      text: "[PLACEHOLDER] Un moment marquant de leur histoire.",
+      text: "« Où tu iras, j'irai ; où tu demeureras, je demeurerai ; ton peuple sera mon peuple, et ton Dieu sera mon Dieu. »",
+      reference: "Ruth 1:16",
     },
     {
-      year: "[PLACEHOLDER]",
+      year: "",
       title: "La demande",
-      text: "[PLACEHOLDER] Le récit de la demande en mariage.",
+      text: "« Mets-moi comme un sceau sur ton cœur, comme un sceau sur ton bras ; car l'amour est fort comme la mort. »",
+      reference: "Cantique des Cantiques 8:6",
     },
     {
       year: "2027",
       title: "Le grand jour",
       text: "Le 20 février 2027, Olivier et Céline s'uniront pour la vie au Complexe Mundi, à Yaoundé.",
+      reference: "",
     },
   ],
 };
@@ -78,6 +81,7 @@ export const accommodation = {
       description:
         "[PLACEHOLDER] Description de la chambre standard — confort essentiel dans un cadre apaisant.",
       capacity: "2 personnes",
+      price: "50 000 FCFA / nuit",
       amenities: ["Lit double", "Salle de bain privée", "Climatisation", "Wi-Fi"],
     },
     {
@@ -86,6 +90,7 @@ export const accommodation = {
       description:
         "[PLACEHOLDER] Description de la chambre premium — plus d'espace et de raffinement.",
       capacity: "2-3 personnes",
+      price: "50 000 FCFA / nuit",
       amenities: ["Lit king size", "Coin salon", "Climatisation", "Wi-Fi", "Vue jardin"],
     },
     {
@@ -94,6 +99,7 @@ export const accommodation = {
       description:
         "[PLACEHOLDER] Description de la suite — l'expérience la plus exclusive du complexe.",
       capacity: "2-4 personnes",
+      price: "80 000 FCFA / nuit",
       amenities: ["Chambre + salon séparés", "Baignoire", "Climatisation", "Wi-Fi", "Terrasse privée"],
     },
   ],
@@ -121,14 +127,36 @@ export const dressCode = {
 
 export const dayOf = {
   title: "Jour J",
-  subtitle: "Le programme complet du 20 février 2027.",
-  schedule: [
-    { time: "09h30", title: "Accueil des invités", description: "[PLACEHOLDER] Détails de l'accueil." },
-    { time: "10h00", title: "Cérémonie", description: "[PLACEHOLDER] Détails de la cérémonie." },
-    { time: "12h00", title: "Cocktail", description: "[PLACEHOLDER] Détails du cocktail." },
-    { time: "13h30", title: "Séance photo", description: "[PLACEHOLDER] Détails de la séance photo." },
-    { time: "15h00", title: "Réception", description: "[PLACEHOLDER] Détails de la réception." },
-    { time: "19h00", title: "Soirée", description: "[PLACEHOLDER] Détails de la soirée." },
+  subtitle: "Le programme complet des 20 et 21 février 2027.",
+  days: [
+    {
+      date: "20 Février 2027",
+      schedule: [
+        { time: "10h00", title: "Cérémonie civile", description: "" },
+        { time: "11h00 – 12h00", title: "Séances photos", description: "" },
+        { time: "12h00 – 13h00", title: "Vin d'honneur", description: "" },
+        { time: "16h00 – 18h00", title: "Cérémonie religieuse", description: "" },
+        { time: "18h30 – 19h30", title: "Séances photos", description: "" },
+        {
+          time: "19h30",
+          title: "Accueil des invités",
+          description: "Installation dans le lieu réservé à la soirée.",
+        },
+        { time: "20h00", title: "Repas", description: "" },
+        {
+          time: "22h00",
+          title: "Soirée dansante",
+          description: "Ouverture de la soirée dansante, jusqu'à 4h du matin.",
+        },
+      ],
+    },
+    {
+      date: "21 Février 2027",
+      schedule: [
+        { time: "12h00", title: "Repas traditionnel", description: "" },
+        { time: "15h00", title: "Fin", description: "" },
+      ],
+    },
   ],
 };
 
@@ -137,19 +165,19 @@ export const traditions = {
   subtitle: "Un hommage à nos racines et à nos coutumes.",
   outfits: [
     {
-      name: "[PLACEHOLDER] Tenue traditionnelle 1",
-      description: "[PLACEHOLDER] Description de la tenue et de sa signification.",
+      name: "Ekang",
+      description: "L'élégance Ekang, un héritage culturel porté avec fierté et distinction.",
     },
     {
-      name: "[PLACEHOLDER] Tenue traditionnelle 2",
-      description: "[PLACEHOLDER] Description de la tenue et de sa signification.",
+      name: "Peau de panthère",
+      description: "Quand la tradition rencontre la majesté sauvage de la panthère.",
     },
   ],
   customs: "[PLACEHOLDER] Présentation des coutumes observées lors de la cérémonie traditionnelle.",
   menu: [
-    { name: "[PLACEHOLDER] Plat traditionnel 1", description: "[PLACEHOLDER] Description du plat." },
-    { name: "[PLACEHOLDER] Plat traditionnel 2", description: "[PLACEHOLDER] Description du plat." },
-    { name: "[PLACEHOLDER] Plat traditionnel 3", description: "[PLACEHOLDER] Description du plat." },
+    { name: "Mets de pistache & bâton de manioc", description: "" },
+    { name: "Taro à la sauce jaune", description: "" },
+    { name: "Légumes sautés", description: "" },
   ],
 };
 
@@ -164,8 +192,7 @@ export const location = {
 export const practicalInfo = {
   title: "Informations utiles",
   address: couple.venueFullAddress,
-  phone: "[PLACEHOLDER] +237 6XX XXX XXX",
-  email: "[PLACEHOLDER] contact@olivier-celine.com",
+  email: "oonana@laposte.net",
   arrivalTime: "Arrivée recommandée à partir de 09h30",
   ceremonyStart: "Début de la cérémonie à 10h00",
   notes:

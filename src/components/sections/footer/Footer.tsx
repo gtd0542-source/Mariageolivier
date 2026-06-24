@@ -1,12 +1,7 @@
-import { MapPin, Phone, Mail } from "lucide-react";
-import { couple, footer, practicalInfo, whatsapp } from "@/data/content";
-import { buildWhatsAppLink } from "@/integrations/notion";
+import { MapPin, Mail } from "lucide-react";
+import { couple, footer, practicalInfo } from "@/data/content";
 
 export function Footer() {
-  const whatsappHref = practicalInfo.phone.includes("PLACEHOLDER")
-    ? `https://wa.me/${whatsapp.countryCode}`
-    : buildWhatsAppLink(practicalInfo.phone);
-
   return (
     <footer className="bg-charcoal py-16 text-ivory">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
@@ -26,24 +21,10 @@ export function Footer() {
               <MapPin size={16} /> {couple.venueName}, {couple.venueCity}
             </a>
             <a
-              href={`tel:${practicalInfo.phone}`}
-              className="flex items-center gap-2 transition-colors hover:text-gold-light"
-            >
-              <Phone size={16} /> {practicalInfo.phone}
-            </a>
-            <a
               href={`mailto:${practicalInfo.email}`}
               className="flex items-center gap-2 transition-colors hover:text-gold-light"
             >
               <Mail size={16} /> {practicalInfo.email}
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 transition-colors hover:text-gold-light"
-            >
-              WhatsApp
             </a>
           </div>
 

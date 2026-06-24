@@ -39,6 +39,7 @@ export function Accommodation() {
               name={cat.name}
               description={cat.description}
               capacity={cat.capacity}
+              price={cat.price}
               amenities={cat.amenities}
               image={roomImages[cat.id as keyof typeof roomImages]}
               delay={i * 0.1}

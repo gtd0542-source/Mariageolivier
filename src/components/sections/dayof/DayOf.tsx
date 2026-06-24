@@ -30,18 +30,28 @@ export function DayOf() {
             style={{ height: lineHeight }}
           />
 
-          <div className="flex flex-col gap-12">
-            {dayOf.schedule.map((step, i) => (
-              <Reveal key={step.title} delay={i * 0.05} className="relative">
-                <span className="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-gold bg-mist sm:-left-14">
-                  <span className="h-2 w-2 rounded-full bg-gold" />
-                </span>
-                <p className="font-display text-sm uppercase tracking-[0.2em] text-gold-deep">
-                  {step.time}
-                </p>
-                <h3 className="mt-1 font-display text-2xl text-charcoal">{step.title}</h3>
-                <p className="mt-2 font-body text-stone">{step.description}</p>
-              </Reveal>
+          <div className="flex flex-col gap-14">
+            {dayOf.days.map((day, dayIndex) => (
+              <div key={day.date} className="flex flex-col gap-12">
+                <Reveal delay={dayIndex * 0.1}>
+                  <p className="font-display text-lg text-gold-deep sm:text-xl">{day.date}</p>
+                </Reveal>
+
+                {day.schedule.map((step, i) => (
+                  <Reveal key={step.title + step.time} delay={i * 0.05} className="relative">
+                    <span className="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-gold bg-mist sm:-left-14">
+                      <span className="h-2 w-2 rounded-full bg-gold" />
+                    </span>
+                    <p className="font-display text-sm uppercase tracking-[0.2em] text-gold-deep">
+                      {step.time}
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl text-charcoal">{step.title}</h3>
+                    {step.description && (
+                      <p className="mt-2 font-body text-stone">{step.description}</p>
+                    )}
+                  </Reveal>
+                ))}
+              </div>
             ))}
           </div>
         </div>

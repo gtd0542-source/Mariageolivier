@@ -1,6 +1,7 @@
 // Registre central de toutes les images du site.
 // Pour remplacer une image : changez uniquement son `src` ci-dessous.
-// Les URLs actuelles sont des placeholders libres de droits (Unsplash) en attendant les photos retouchées.
+// Les photos d'Olivier & Céline, du Complexe Mundi, des tenues et du menu sont les vraies photos fournies.
+// Les chambres (accommodation) restent en placeholders Unsplash en attendant de vraies photos.
 
 export type ImageAsset = {
   src: string;
@@ -13,36 +14,36 @@ export type ImageAsset = {
 
 export const images = {
   hero: {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2400&auto=format&fit=crop",
-    alt: "Olivier et Céline",
-    width: 2400,
-    height: 1600,
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782156203/Gemini_Generated_Image_9t3aly9t3aly9t3a_vsesxz.png",
+    alt: "Olivier et Céline échangeant leurs vœux",
+    width: 848,
+    height: 1244,
   } satisfies ImageAsset,
 
   story: [
     {
-      src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop",
-      alt: "Olivier et Céline, leur rencontre",
-      width: 1600,
-      height: 2000,
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156143/WhatsApp_Image_2026-06-06_at_20.39.45_9_xfbypg.jpg",
+      alt: "Olivier",
+      width: 1200,
+      height: 1600,
     },
     {
-      src: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1600&auto=format&fit=crop",
-      alt: "Olivier et Céline, un moment complice",
-      width: 1600,
-      height: 2000,
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782208457/WhatsApp_Image_2026-06-06_at_20.39.46_1_vth82q.jpg",
+      alt: "Céline",
+      width: 1200,
+      height: 1599,
     },
     {
-      src: "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1600&auto=format&fit=crop",
-      alt: "Olivier et Céline, la demande",
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156134/WhatsApp_Image_2026-06-06_at_20.37.36_ngp8i0.jpg",
+      alt: "Olivier et Céline",
       width: 1600,
-      height: 2000,
+      height: 1200,
     },
     {
-      src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1600&auto=format&fit=crop",
-      alt: "Olivier et Céline, vers le grand jour",
-      width: 1600,
-      height: 2000,
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156172/IMG_5514.PNG_ajl3xt.png",
+      alt: "Olivier et Céline en tenue traditionnelle",
+      width: 896,
+      height: 1195,
     },
   ] satisfies ImageAsset[],
 
@@ -70,38 +71,36 @@ export const images = {
   traditions: {
     outfits: [
       {
-        src: "",
-        alt: "Tenue traditionnelle — photo à venir",
-        width: 1600,
-        height: 2000,
-        placeholder: true,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782223231/Tenu_2_duuzeh.png",
+        alt: "Tenue traditionnelle Ekang",
+        width: 415,
+        height: 739,
       },
       {
-        src: "",
-        alt: "Tenue traditionnelle — photo à venir",
-        width: 1600,
-        height: 2000,
-        placeholder: true,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782223231/Tenu_1_z7d0ty.png",
+        alt: "Tenue traditionnelle peau de panthère",
+        width: 415,
+        height: 739,
       },
     ] satisfies ImageAsset[],
     menu: [
       {
-        src: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=1600&auto=format&fit=crop",
-        alt: "Plat traditionnel",
-        width: 1600,
-        height: 1067,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782223238/WhatsApp_Image_2026-06-23_at_14.47_ndkal6.png",
+        alt: "Mets de pistache et bâton de manioc",
+        width: 1071,
+        height: 1071,
       },
       {
-        src: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop",
-        alt: "Plat traditionnel",
-        width: 1600,
-        height: 1067,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782219433/Achu_Yellow_Soup__Le_Taro_et_Sauce_Jaune_kengskitchen_geshov.jpg",
+        alt: "Taro et sauce jaune",
+        width: 500,
+        height: 868,
       },
       {
-        src: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1600&auto=format&fit=crop",
-        alt: "Plat traditionnel",
-        width: 1600,
-        height: 1067,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782214038/a386812cad3a2bd4e232603766d6fde5_rvgmm6.png",
+        alt: "Légumes sautés",
+        width: 736,
+        height: 981,
       },
     ] satisfies ImageAsset[],
   },
@@ -146,9 +145,9 @@ export const images = {
   ] satisfies ImageAsset[],
 
   ogImage: {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782156203/Gemini_Generated_Image_9t3aly9t3aly9t3a_vsesxz.png",
     alt: "Olivier et Céline — 20 Février 2027",
-    width: 1200,
-    height: 630,
+    width: 848,
+    height: 1244,
   } satisfies ImageAsset,
 };

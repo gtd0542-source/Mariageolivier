@@ -15,7 +15,7 @@ export async function GET() {
 
   if (!apiKey) {
     return NextResponse.json(
-      { available: false, reason: "OPENWEATHER_API_KEY non configurée." },
+      { available: false, reason: "Les prévisions météo seront bientôt disponibles." },
       { status: 200 }
     );
   }

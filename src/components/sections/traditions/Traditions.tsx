@@ -23,7 +23,7 @@ export function Traditions() {
               const img = images.traditions.outfits[i % images.traditions.outfits.length];
               return (
                 <Reveal key={outfit.name} delay={i * 0.1} className="overflow-hidden rounded-2xl bg-mist shadow-sm">
-                  <div className="relative aspect-[4/3]">
+                  <div className="relative aspect-[3/4]">
                     <ImageOrPlaceholder
                       image={img}
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -32,7 +32,9 @@ export function Traditions() {
                   </div>
                   <div className="p-6">
                     <h4 className="font-display text-lg text-charcoal">{outfit.name}</h4>
-                    <p className="mt-2 font-body text-sm text-stone">{outfit.description}</p>
+                    {outfit.description && (
+                      <p className="mt-2 font-body text-sm text-stone">{outfit.description}</p>
+                    )}
                   </div>
                 </Reveal>
               );
@@ -54,7 +56,7 @@ export function Traditions() {
               const img = images.traditions.menu[i % images.traditions.menu.length];
               return (
                 <Reveal key={dish.name} delay={i * 0.1} className="overflow-hidden rounded-2xl bg-mist shadow-sm">
-                  <div className="relative aspect-[4/3]">
+                  <div className="relative aspect-[3/4]">
                     <ImageOrPlaceholder
                       image={img}
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -63,7 +65,9 @@ export function Traditions() {
                   </div>
                   <div className="p-5">
                     <h4 className="font-display text-base text-charcoal">{dish.name}</h4>
-                    <p className="mt-2 font-body text-sm text-stone">{dish.description}</p>
+                    {dish.description && (
+                      <p className="mt-2 font-body text-sm text-stone">{dish.description}</p>
+                    )}
                   </div>
                 </Reveal>
               );
