@@ -2,8 +2,10 @@
 
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { accommodation } from "@/data/content";
 import { InputField } from "@/components/ui/FormField";
+import { ConfettiPetals } from "@/components/sections/rsvp/ConfettiPetals";
 
 type AccommodationFormValues = {
   fullName: string;
@@ -46,6 +48,34 @@ export function AccommodationForm({ selectedRoom }: { selectedRoom: string }) {
     } catch {
       setStatus("error");
     }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="relative flex min-h-[320px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-white px-8 py-16 text-center">
+        <ConfettiPetals />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative z-10"
+        >
+          <h3 className="font-display text-2xl text-charcoal sm:text-3xl">
+            Votre demande a bien été enregistrée.
+          </h3>
+          <p className="mt-3 max-w-md font-body text-stone">
+            Nous vous contacterons rapidement pour confirmer votre réservation.
+          </p>
+          <button
+            type="button"
+            onClick={() => setStatus("idle")}
+            className="mt-8 cursor-pointer rounded-full border border-gold-deep px-6 py-2 font-body text-sm uppercase tracking-[0.15em] text-gold-deep transition-colors hover:bg-gold-deep hover:text-white"
+          >
+            Envoyer une autre demande
+          </button>
+        </motion.div>
+      </div>
+    );
   }
 
   return (
@@ -110,11 +140,6 @@ export function AccommodationForm({ selectedRoom }: { selectedRoom: string }) {
         error={errors.checkOut?.message}
       />
 
-      {status === "success" && (
-        <p role="status" className="sm:col-span-2 font-body text-sm text-sage-dark">
-          Votre demande de réservation a bien été envoyée. Nous vous contacterons rapidement.
-        </p>
-      )}
       {status === "error" && (
         <p role="alert" className="sm:col-span-2 text-sm text-red-600">
           Une erreur est survenue. Veuillez réessayer.
