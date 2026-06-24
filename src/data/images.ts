@@ -14,10 +14,10 @@ export type ImageAsset = {
 
 export const images = {
   hero: {
-    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782156203/Gemini_Generated_Image_9t3aly9t3aly9t3a_vsesxz.png",
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782293471/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
     alt: "Olivier et Céline échangeant leurs vœux",
-    width: 848,
-    height: 1244,
+    width: 2752,
+    height: 1536,
   } satisfies ImageAsset,
 
   story: [
@@ -145,9 +145,9 @@ export const images = {
   ] satisfies ImageAsset[],
 
   ogImage: {
-    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782156203/Gemini_Generated_Image_9t3aly9t3aly9t3a_vsesxz.png",
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782293471/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
     alt: "Olivier et Céline — 20 Février 2027",
-    width: 848,
-    height: 1244,
+    width: 2752,
+    height: 1536,
   } satisfies ImageAsset,
 };
