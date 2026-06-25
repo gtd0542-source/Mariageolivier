@@ -1,6 +1,6 @@
 // Registre central de toutes les images du site.
 // Pour remplacer une image : changez uniquement son `src` ci-dessous.
-// Les photos d'Olivier & Céline, du Complexe Mundi, des tenues et du menu sont les vraies photos fournies.
+// Les photos de Céline & Olivier, du Complexe Mundi, des tenues et du menu sont les vraies photos fournies.
 // Les chambres (accommodation) restent en placeholders Unsplash en attendant de vraies photos.
 
 export type ImageAsset = {
@@ -15,7 +15,7 @@ export type ImageAsset = {
 export const images = {
   hero: {
     src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782293471/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
-    alt: "Olivier et Céline échangeant leurs vœux",
+    alt: "Céline et Olivier échangeant leurs vœux",
     width: 2752,
     height: 1536,
   } satisfies ImageAsset,
@@ -35,13 +35,13 @@ export const images = {
     },
     {
       src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156134/WhatsApp_Image_2026-06-06_at_20.37.36_ngp8i0.jpg",
-      alt: "Olivier et Céline",
+      alt: "Céline et Olivier",
       width: 1600,
       height: 1200,
     },
     {
       src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156172/IMG_5514.PNG_ajl3xt.png",
-      alt: "Olivier et Céline en tenue traditionnelle",
+      alt: "Céline et Olivier en tenue traditionnelle",
       width: 896,
       height: 1195,
     },
@@ -77,10 +77,10 @@ export const images = {
         height: 739,
       },
       {
-        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782223231/Tenu_1_z7d0ty.png",
-        alt: "Tenue traditionnelle peau de panthère",
-        width: 415,
-        height: 739,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782342880/Tenu_1_z7d0ty.png",
+        alt: "Le Ndop, tenue traditionnelle des Bamilékés",
+        width: 753,
+        height: 1024,
       },
     ] satisfies ImageAsset[],
     menu: [
@@ -146,7 +146,7 @@ export const images = {
 
   ogImage: {
     src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782293471/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
-    alt: "Olivier et Céline — 20 Février 2027",
+    alt: "Céline et Olivier — 20 Février 2027",
     width: 2752,
     height: 1536,
   } satisfies ImageAsset,

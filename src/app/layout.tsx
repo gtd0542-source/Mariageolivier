@@ -16,15 +16,15 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
 });
 
-const siteUrl = "https://olivier-et-celine.com"; // [PLACEHOLDER] domaine définitif (Hostinger)
+const siteUrl = "https://celine-et-olivier.com"; // [PLACEHOLDER] domaine définitif (Hostinger)
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: `${couple.fullNames} — ${couple.weddingDateLabel}`,
-  description: `Rejoignez Olivier et Céline pour célébrer leur mariage le ${couple.weddingDateLabel} au ${couple.venueName}, ${couple.venueCity}. Confirmez votre présence, réservez votre hébergement et découvrez le programme complet.`,
+  description: `Rejoignez Céline et Olivier pour célébrer leur mariage le ${couple.weddingDateLabel} au ${couple.venueName}, ${couple.venueCity}. Confirmez votre présence, réservez votre hébergement et découvrez le programme complet.`,
   keywords: [
     "mariage",
-    "Olivier et Céline",
+    "Céline et Olivier",
     "Complexe Mundi",
     "Yaoundé",
     "Cameroun",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: `${couple.fullNames} — ${couple.weddingDateLabel}`,
-    description: `Célébrons ensemble l'union d'Olivier et Céline, le ${couple.weddingDateLabel} au ${couple.venueName}, ${couple.venueCity}.`,
+    description: `Célébrons ensemble l'union de Céline et Olivier, le ${couple.weddingDateLabel} au ${couple.venueName}, ${couple.venueCity}.`,
     url: siteUrl,
     siteName: `${couple.fullNames}`,
     images: [{ url: images.ogImage.src, width: 1200, height: 630 }],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${couple.fullNames} — ${couple.weddingDateLabel}`,
-    description: `Célébrons ensemble l'union d'Olivier et Céline, le ${couple.weddingDateLabel}.`,
+    description: `Célébrons ensemble l'union de Céline et Olivier, le ${couple.weddingDateLabel}.`,
     images: [images.ogImage.src],
   },
   robots: {

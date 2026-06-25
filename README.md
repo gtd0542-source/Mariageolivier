@@ -1,6 +1,6 @@
-# Olivier & Céline — 20 Février 2027
+# Céline & Olivier — 20 Février 2027
 
-Plateforme de mariage premium pour Olivier et Céline, au Complexe Mundi (Yaoundé, Cameroun). Next.js 16, TypeScript, Tailwind CSS v4, Framer Motion, GSAP, intégration Notion (RSVP + Hébergement), Google Maps, météo.
+Plateforme de mariage premium pour Céline et Olivier, au Complexe Mundi (Yaoundé, Cameroun). Next.js 16, TypeScript, Tailwind CSS v4, Framer Motion, GSAP, intégration Notion (RSVP + Hébergement), Google Maps, météo.
 
 ## Stack technique
 
@@ -55,7 +55,7 @@ Tout le texte affiché sur le site (prénoms, programme du jour J, menu, dress c
 
 Toutes les images sont déclarées dans **`src/data/images.ts`**. Pour remplacer une photo, changez uniquement son champ `src` (gardez `width`/`height` proches du ratio réel pour éviter les distorsions).
 
-Deux visuels (tenues traditionnelles) n'ont pas de photo fiable pour l'instant et affichent un encart « Photo à venir » — retirez `placeholder: true` et renseignez `src` une fois les photos disponibles.
+Si une photo n'est pas encore disponible, ajoutez `placeholder: true` à son entrée dans `images.ts` : un encart « Photo à venir » s'affiche à la place plutôt qu'une image incorrecte.
 
 ## Notion — RSVP & Hébergement
 
@@ -105,7 +105,7 @@ Les captures sont écrites dans `verify-screenshots/` (non versionné).
 
 ## Connexion du domaine Hostinger
 
-1. Sur Vercel : **Project → Settings → Domains** → ajoutez votre domaine (ex. `olivier-et-celine.com`).
+1. Sur Vercel : **Project → Settings → Domains** → ajoutez votre domaine (ex. `celine-et-olivier.com`).
 2. Vercel affiche les enregistrements DNS à créer (généralement un `A` vers `76.76.21.21` pour la racine, et un `CNAME` vers `cname.vercel-dns.com` pour `www`).
 3. Sur Hostinger : **hPanel → Domaines → DNS / Zone Editor** de votre domaine, créez/modifiez ces enregistrements avec les valeurs fournies par Vercel.
 4. Attendez la propagation DNS (de quelques minutes à 24h). Vercel détecte automatiquement la validation et délivre le certificat SSL.

@@ -3,7 +3,7 @@
 export const couple = {
   groom: "Olivier",
   bride: "Céline",
-  fullNames: "Olivier & Céline",
+  fullNames: "Céline & Olivier",
   weddingDate: "2027-02-20T10:00:00+01:00", // 20 février 2027, Yaoundé (UTC+1)
   weddingDateLabel: "20 Février 2027",
   venueName: "Complexe Mundi",
@@ -55,7 +55,7 @@ export const story = {
     {
       year: "2027",
       title: "Le grand jour",
-      text: "Le 20 février 2027, Olivier et Céline s'uniront pour la vie au Complexe Mundi, à Yaoundé.",
+      text: "Le 20 février 2027, Céline et Olivier s'uniront pour la vie au Complexe Mundi, à Yaoundé.",
       reference: "",
     },
   ],
@@ -63,7 +63,7 @@ export const story = {
 
 export const rsvp = {
   title: "Confirmation de présence",
-  subtitle: "Votre présence est un cadeau précieux pour Olivier et Céline.",
+  subtitle: "Votre présence est un cadeau précieux pour Céline et Olivier.",
   successTitle: "Votre présence a bien été enregistrée.",
   successMessage:
     "Nous avons hâte de partager ce moment exceptionnel avec vous.",
@@ -111,7 +111,7 @@ export const dressCode = {
   subtitle:
     "Réservé aux mariés, le blanc est la seule teinte à éviter. Exprimez votre élégance dans toute la richesse de la palette Chic & Nature.",
   palette: [
-    { name: "Vert sauge", hex: "#9CAF88" },
+    { name: "Corail classique", hex: "#FF7F50" },
     { name: "Vert eucalyptus", hex: "#87A08F" },
     { name: "Beige sable", hex: "#E8DDC7" },
     { name: "Doré subtil", hex: "#C9A86A" },
@@ -169,8 +169,8 @@ export const traditions = {
       description: "L'élégance Ekang, un héritage culturel porté avec fierté et distinction.",
     },
     {
-      name: "Peau de panthère",
-      description: "Quand la tradition rencontre la majesté sauvage de la panthère.",
+      name: "Le Ndop",
+      description: "Tenue traditionnelle des Bamilékés au Cameroun.",
     },
   ],
   customs: "[PLACEHOLDER] Présentation des coutumes observées lors de la cérémonie traditionnelle.",
@@ -192,7 +192,7 @@ export const location = {
 export const practicalInfo = {
   title: "Informations utiles",
   address: couple.venueFullAddress,
-  email: "oonana@laposte.net",
+  email: "mariagecelineolivier2027@gmail.com",
   arrivalTime: "Arrivée recommandée à partir de 09h30",
   ceremonyStart: "Début de la cérémonie à 10h00",
   notes:

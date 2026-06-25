@@ -33,7 +33,7 @@ export default function Home() {
       },
     },
     image: [images.ogImage.src],
-    description: `Mariage d'Olivier et Céline au ${couple.venueName}, ${couple.venueCity}.`,
+    description: `Mariage de Céline et Olivier au ${couple.venueName}, ${couple.venueCity}.`,
   };
 
   return (

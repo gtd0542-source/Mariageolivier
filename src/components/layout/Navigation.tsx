@@ -62,7 +62,7 @@ export function Navigation() {
             scrolled ? "text-charcoal" : "text-ivory text-shadow-soft"
           )}
         >
-          {couple.groom[0]} &amp; {couple.bride[0]}
+          {couple.bride[0]} &amp; {couple.groom[0]}
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex">

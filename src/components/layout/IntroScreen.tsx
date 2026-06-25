@@ -47,7 +47,7 @@ export function IntroScreen() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              {couple.groom[0]} &amp; {couple.bride[0]}
+              {couple.bride[0]} &amp; {couple.groom[0]}
             </motion.div>
 
             <motion.p
