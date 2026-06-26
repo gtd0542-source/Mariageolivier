@@ -113,10 +113,10 @@ export const dressCode = {
   palette: [
     { name: "Corail classique", hex: "#FF7F50" },
     { name: "Vert eucalyptus", hex: "#87A08F" },
-    { name: "Beige sable", hex: "#E8DDC7" },
     { name: "Doré subtil", hex: "#C9A86A" },
-    { name: "Gris clair", hex: "#D8D5CE" },
-    { name: "Blanc cassé (accessoires uniquement)", hex: "#FAF7F2" },
+    { name: "Jaune or", hex: "#D4A017" },
+    { name: "Marron", hex: "#6F4E37" },
+    { name: "Bordeaux", hex: "#722F37" },
   ],
   inspirations: [
     "[PLACEHOLDER] Inspiration tenue homme — costume tailleur ton sur ton",
