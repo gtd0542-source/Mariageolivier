@@ -14,10 +14,10 @@ export type ImageAsset = {
 
 export const images = {
   hero: {
-    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782473573/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_2400/v1782648392/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
     alt: "Céline et Olivier",
-    width: 2144,
-    height: 1197,
+    width: 1901,
+    height: 1060,
   } satisfies ImageAsset,
 
   story: [
@@ -28,10 +28,10 @@ export const images = {
       height: 1600,
     },
     {
-      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782208457/WhatsApp_Image_2026-06-06_at_20.39.46_1_vth82q.jpg",
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782648855/WhatsApp_Image_2026-06-06_at_20.39.46_1_vth82q.jpg",
       alt: "Céline",
-      width: 1200,
-      height: 1599,
+      width: 898,
+      height: 1600,
     },
     {
       src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156134/WhatsApp_Image_2026-06-06_at_20.37.36_ngp8i0.jpg",
@@ -71,16 +71,16 @@ export const images = {
   traditions: {
     outfits: [
       {
-        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782223231/Tenu_2_duuzeh.png",
-        alt: "Tenue traditionnelle Ekang",
-        width: 415,
-        height: 739,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782649180/Tenu_2_duuzeh.jpg",
+        alt: "Tissu pagne du mariage",
+        width: 836,
+        height: 1115,
       },
       {
-        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782342880/Tenu_1_z7d0ty.png",
-        alt: "Le Ndop, tenue traditionnelle des Bamilékés",
-        width: 753,
-        height: 1024,
+        src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782649166/Tenu_1_z7d0ty.jpg",
+        alt: "Tissu pagne du mariage",
+        width: 896,
+        height: 1195,
       },
     ] satisfies ImageAsset[],
     menu: [
@@ -145,9 +145,9 @@ export const images = {
   ] satisfies ImageAsset[],
 
   ogImage: {
-    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782473573/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
+    src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1200/v1782648392/rend_cette_image_en_1920x1080_202606241030_exeqju.jpg",
     alt: "Céline et Olivier — 20 Février 2027",
-    width: 2144,
-    height: 1197,
+    width: 1901,
+    height: 1060,
   } satisfies ImageAsset,
 };

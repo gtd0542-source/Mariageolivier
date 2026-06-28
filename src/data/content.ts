@@ -165,12 +165,12 @@ export const traditions = {
   subtitle: "Un hommage à nos racines et à nos coutumes.",
   outfits: [
     {
-      name: "Ekang",
-      description: "L'élégance Ekang, un héritage culturel porté avec fierté et distinction.",
+      name: "Tissu pagne du mariage",
+      description: "",
     },
     {
-      name: "Le Ndop",
-      description: "Tenue traditionnelle des Bamilékés au Cameroun.",
+      name: "Tissu pagne du mariage",
+      description: "",
     },
   ],
   customs: "[PLACEHOLDER] Présentation des coutumes observées lors de la cérémonie traditionnelle.",
