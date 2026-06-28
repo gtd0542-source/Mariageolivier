@@ -40,10 +40,10 @@ export const images = {
       height: 1200,
     },
     {
-      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782156172/IMG_5514.PNG_ajl3xt.png",
+      src: "https://res.cloudinary.com/dikdhk3ng/image/upload/f_auto,q_auto,c_limit,w_1600/v1782659892/IMG_5514.PNG_ajl3xt.jpg",
       alt: "Céline et Olivier en tenue traditionnelle",
-      width: 896,
-      height: 1195,
+      width: 1792,
+      height: 2400,
     },
   ] satisfies ImageAsset[],
 
