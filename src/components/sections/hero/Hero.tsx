@@ -60,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.25 }}
-          className="mt-4 font-display text-5xl text-shadow-soft sm:text-6xl md:text-7xl"
+          className="mt-4 whitespace-nowrap font-display text-[2.2rem] text-shadow-soft min-[380px]:text-[2.6rem] sm:text-6xl md:text-7xl"
         >
           {couple.fullNames}
         </motion.h1>

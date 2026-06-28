@@ -36,7 +36,7 @@ export const story = {
   timeline: [
     {
       year: "",
-      title: "Leur rencontre",
+      title: "La rencontre",
       text: "« Celui qui trouve une femme trouve le bonheur ; c'est une grâce qu'il obtient de l'Éternel. »",
       reference: "Proverbes 18:22",
     },
