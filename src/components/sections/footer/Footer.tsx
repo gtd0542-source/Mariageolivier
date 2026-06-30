@@ -36,6 +36,18 @@ export function Footer() {
         <div className="mt-12 border-t border-ivory/15 pt-6 text-center font-body text-xs uppercase tracking-[0.15em] text-ivory/50">
           {couple.fullNames} · {couple.weddingDateLabel}
         </div>
+
+        <div className="mt-4 text-center font-body text-xs text-ivory/35">
+          Réalisé par{" "}
+          <a
+            href="https://wa.me/237694879563"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ivory/55 underline underline-offset-2 transition-colors hover:text-gold-light"
+          >
+            Georges Zinga
+          </a>
+        </div>
       </div>
     </footer>
   );
