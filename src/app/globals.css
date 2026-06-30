@@ -54,6 +54,50 @@ h1, h2, h3, h4, .font-display {
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* ── react-phone-number-input ── */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-sand);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  background: white;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-charcoal);
+  transition: border-color 0.2s;
+}
+.phone-input-wrapper:focus-within {
+  outline: none;
+  border-color: var(--color-sage);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-sage) 15%, transparent);
+}
+.phone-input-wrapper .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+.phone-input-wrapper .PhoneInputCountrySelect {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.phone-input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--color-charcoal);
+}
+.phone-input-wrapper input::placeholder {
+  color: var(--color-stone);
+  opacity: 0.6;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
