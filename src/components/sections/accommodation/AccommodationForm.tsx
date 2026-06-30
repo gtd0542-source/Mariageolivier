@@ -1,8 +1,10 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import { accommodation } from "@/data/content";
 import { InputField } from "@/components/ui/FormField";
 import { ConfettiPetals } from "@/components/sections/rsvp/ConfettiPetals";
@@ -24,6 +26,7 @@ export function AccommodationForm({ selectedRoom }: { selectedRoom: string }) {
     handleSubmit,
     reset,
     setValue,
+    control,
     formState: { errors, isSubmitting },
   } = useForm<AccommodationFormValues>({
     defaultValues: { roomType: selectedRoom, guestCount: 1 },
@@ -86,14 +89,62 @@ export function AccommodationForm({ selectedRoom }: { selectedRoom: string }) {
         {...register("fullName", { required: "Votre nom complet est requis." })}
         error={errors.fullName?.message}
       />
-      <InputField
-        label="Téléphone"
-        type="tel"
-        required
-        {...register("phone", { required: "Votre téléphone est requis." })}
-        error={errors.phone?.message}
-      />
-      <InputField label="WhatsApp" type="tel" {...register("whatsappNumber")} />
+
+      {/* Téléphone avec sélecteur de pays */}
+      <div className="flex flex-col gap-1">
+        <label className="font-body text-xs uppercase tracking-[0.12em] text-stone">
+          Téléphone <span className="text-gold-deep">*</span>
+        </label>
+        <Controller
+          name="phone"
+          control={control}
+          rules={{
+            required: "Votre téléphone est requis.",
+            validate: (v) => !v || isValidPhoneNumber(v) || "Numéro invalide.",
+          }}
+          render={({ field }) => (
+            <PhoneInput
+              {...field}
+              defaultCountry="CM"
+              international
+              countryCallingCodeEditable={false}
+              placeholder="6XX XXX XXX"
+              className="phone-input-wrapper"
+            />
+          )}
+        />
+        {errors.phone && (
+          <p className="font-body text-xs text-red-500">{errors.phone.message}</p>
+        )}
+      </div>
+
+      {/* WhatsApp avec sélecteur de pays */}
+      <div className="flex flex-col gap-1">
+        <label className="font-body text-xs uppercase tracking-[0.12em] text-stone">
+          WhatsApp
+        </label>
+        <Controller
+          name="whatsappNumber"
+          control={control}
+          rules={{
+            validate: (v) => !v || isValidPhoneNumber(v) || "Numéro invalide.",
+          }}
+          render={({ field }) => (
+            <PhoneInput
+              {...field}
+              defaultCountry="CM"
+              international
+              countryCallingCodeEditable={false}
+              placeholder="Si différent du téléphone"
+              className="phone-input-wrapper"
+            />
+          )}
+        />
+        {errors.whatsappNumber && (
+          <p className="font-body text-xs text-red-500">{errors.whatsappNumber.message}</p>
+        )}
+      </div>
+
       <InputField
         label="Email"
         type="email"
